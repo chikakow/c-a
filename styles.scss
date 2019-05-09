@@ -1,0 +1,192 @@
+﻿
+
+/* You can add global styles to this file, and also import other style files */
+@charset "UTF-8";
+ @import "~bootstrap/scss/bootstrap.scss"; /* same as "node_modules/bootstrap/scss/bootstrap.scss" */ // version ^4.1.3 only
+//@import "~bootstrap/dist/css/bootstrap.css"; // version 3.3.7
+$fa-font-path: "/dist/ClientApp/assets/fonts/FontAwesome";
+/*$fa-font-path: "~font-awesome/fonts" !default;*/
+@import "~font-awesome/scss/font-awesome";
+
+// kendo-theme-bootstrap
+@import "~@progress/kendo-theme-bootstrap/dist/all.css";
+
+/* ats-icons */
+@import "./assets/fonts/AtsIcons/css/ats-icons.css";
+@import "./assets/fonts/AtsIcons/css/ats-icons-codes.css";
+@import "./assets/fonts/AtsIcons/css/ats-icons-embedded.css";
+
+/* layouts */
+@import "./assets/css/layouts/site.css";
+@import "./assets/css/layouts/chrome.css";
+@import "./assets/css/layouts/app.css";
+
+/* override styles from node_modules/bootstrap/scss/_reboot.scss */
+body {
+    font-family: 'Roboto', 'Fira Sans', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+
+/* font color and size in the tree view of side bar*/
+.k-group, .k-flatcolorpicker.k-group, .k-menu, .k-menu .k-group, .k-popup.k-widget.k-context-menu {
+    color: #444444;
+}
+
+.k-widget {
+    font-size: 14px;
+}
+
+
+/* set slideout header (in sidebar first node) not to inherit from bootstrap css */
+.slideout-header a {
+    color: #666666 !important;
+}
+
+/* set font-size and background-color for REFRESH button for refreshing the grid */
+.btn-lg, .btn-group-lg > .btn {
+    font-size: 115%;
+}
+
+.k-button.k-primary {
+    background-color: #3f51b5;
+    background-image: unset;
+    border-radius: 2px;
+}
+
+/*.k-primary:hover, .k-primary.k-state-hover, .k-primary:active:hover, .k-primary.k-state-active:hover {
+    color: #ffffff;
+    border-color: #5c6bc0;
+    background-color: #5c6bc0;
+}*/
+
+.k-button.k-primary:hover, .k-button.k-primary.k-state-hover, .k-action-buttons .k-primary:hover, .k-slider .k-draghandle:hover {
+    border-bottom-color: #5c6bc0;
+    border-color: #5c6bc0;
+    color: #fff;
+    background-color: #5c6bc0;
+}
+
+/* grid: column headers in the grid - set font color */
+.k-grid a {
+    color: #999999;
+}
+
+/* grid: remove vertical borders (left and red) for each cell */
+.k-grid td {
+    border-width: 0px 0px 1px 0px;
+}
+
+/* grid: styles for paging - do not show borders */
+.k-pager-wrap .k-link, .k-pager-wrap .k-pager-nav {
+    color: inherit;
+    border-color: inherit;
+    border-width: inherit;
+    border-style: inherit;
+    background-color: inherit;
+    padding-top: 26px;
+    padding-bottom: 26px;
+}
+
+.k-pager-numbers .k-link {
+    border-top: 2px solid transparent !important;
+}
+
+.k-pager-numbers .k-state-selected, .k-pager-numbers .k-state-selected:hover {
+    border: 0px solid #3f51b5;
+    border-top: 2px solid #3f51b5 !important;
+    z-index: 2;
+    cursor: default;
+    background-color: transparent;
+    color: #3f51b5;
+}
+
+.k-state-selected {
+    border-style: solid !important;
+    border-color: #3f51b5 !important;
+    z-index: 2;
+    cursor: default;
+    border-top-width: 2px !important;
+    background-color: transparent;
+    color: #3f51b5;
+}
+
+/*.k-state-selected:hover {
+    color: #fff;
+    background-color: #007bff;
+    z-index: 2;
+    cursor: default;
+}*/
+
+.k-pager-wrap .k-pager-sizes .k-dropdown, .k-pager-wrap .k-pager-sizes > select {
+    margin: 0 8px 0 0;
+    width: 5.2em;
+    background-color: transparent;
+}
+
+.k-menu:not(.k-context-menu) {
+    background: transparent;
+}
+
+.k-pager-wrap .k-link:hover, .k-pager-wrap .k-pager-nav:hover {
+    background-color: transparent;
+    border-color: transparent;
+    z-index: 2;
+}
+
+.k-pager-wrap .k-link:focus, .k-pager-wrap .k-pager-nav:focus {
+    box-shadow: 0 0 0 0 transparent;
+}
+
+/*li.k-state:hover {
+    background-color: #808080;
+}*/
+
+.k-grid-pager {
+    padding: 0px 0px 0px 0px;
+}
+
+/* border for company heading in the app page */
+.panel {
+    border: 1px#ddd solid !important;
+}
+
+.k-state {
+    color: #444444;
+    background-color: transparent;
+}
+
+.k-state:hover {
+    color: #444444;
+    background-color: #ebebeb;
+}
+
+.k-treeview .k-in:hover ,.k-treeview .k-in.k-state-hover.k-state-selected.k-select {
+    background-color: #ebebeb;
+}
+
+.k-top.active {
+    background-color: #ebebeb;
+}
+
+h5 {
+    font-size: 1.0em;
+    color: #2f2f2f;
+    font-family: Roboto-Medium, Helvetica, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+    margin-top: 0.2em;
+    line-height: 1.16667;
+}
+
+h4 {
+    font-size: 1.33333em;
+    letter-spacing: normal;
+    line-height: 1.16667;
+    margin-top: 0.0em;
+    margin-bottom: 0.20833em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.k-grid .k-grid-aria-root {
+    overflow-x: auto!important;
+}
